@@ -1,0 +1,23 @@
+{
+    imports = [
+        "./alacritty.nix"
+        "./obsidian.nix"
+        "./kitty.nix"
+        "./foot.nix"
+        "./wezterm.nix"
+        "./bat.nix"
+        "./eza.nix"
+        "./lazygit.nix"
+        "./starship.nix"
+        "./waybar.nix"
+        "./btop.nix"
+        "./fastfetch.nix"
+        "./neovim.nix"
+        "./tmux.nix"
+        "./yazi.nix"
+        "./git.nix"
+        "./rofi.nix"
+        "./vscode.nix"
+        "./zathura.nix"
+    ];
+}
