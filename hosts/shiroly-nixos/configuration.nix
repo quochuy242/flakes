@@ -81,5 +81,8 @@
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
     # Install system-wide packages
-    environment.systemPackages = [ pkgs.home-manager ];
+    environment.systemPackages = [ 
+        # Install all pkgs in home-manager
+        pkgs.home-manager 
+    ];  
 }

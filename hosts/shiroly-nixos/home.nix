@@ -21,6 +21,7 @@
             pavucontrol
             telegram-desktop
             spotify
+            nautilus
 
             # CLI
             atuin
@@ -33,30 +34,46 @@
             grimblast
             hyprpicker
             playerctl
-            repgrep
-            unzip
-            wget
-            curl
+            ripgrep
+            neovim
             starship
-            wl-clipboard
             yt-dlp
-            zip
             eza
             bat 
             tmux
+            yazi
+            zathura
+            fd
+
+            # Indispensable tools
+            git 
+            vim
+            wget
+            curl
+            wl-clipboard
+            htop
+            unzip
+            zip
 
             # Code stuff
             rustup
             python3
             R
+            gcc
+            go 
+            gnumake
+            just
 
             # Terminal
             foot
             kitty
             alacritty
 
-            # WM
+            # WM & ricing
             dunst
+            waybar
+            cava
+            rofi-wayland
             xdg-desktop-portal-gtk
             xdg-desktop-portal-hyprland
 
