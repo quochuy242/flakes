@@ -72,7 +72,7 @@
     networking = {
         hostName = "shiroly-nixos";
         networkmanager.enable = true;
-        # wireless.enable = true;
+        nameservers = [ "8.8.8.8" "1.1.1.1" ];
     };
 
     # Enable OpenSSH server for remote access
