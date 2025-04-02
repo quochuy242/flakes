@@ -35,11 +35,13 @@
     };
 
     # Configure PipeWire for audio management
+    # hardware.pulseaudio.enable = true;
+    security.rtkit.enable = true;
     services.pipewire = {
-        enable = true;          # Enable PipeWire
-        alsa.enable = true;     # Enable ALSA support
-        alsa.support32Bit = true;  # Enable 32-bit ALSA support
-        pulse.enable = true;    # Enable PulseAudio compatibility
+        enable = true;              # Enable PipeWire
+        alsa.enable = true;         # Enable ALSA support
+        alsa.support32Bit = true;   # Enable 32-bit ALSA support
+        pulse.enable = true;        # Enable PulseAudio compatibility
     };
 
     # Set the system time zone
@@ -67,8 +69,11 @@
     };
 
     # Configure network settings
-    networking.hostName = "shiroly-nixos";  # Set system hostname
-    networking.networkmanager.enable = true;  # Enable NetworkManager for network management
+    networking = {
+        hostName = "shiroly-nixos";
+        networkmanager.enable = true;
+        # wireless.enable = true;
+    };
 
     # Enable OpenSSH server for remote access
     services.openssh.enable = true;
@@ -81,8 +86,21 @@
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
     # Install system-wide packages
-    environment.systemPackages = [ 
-        # Install all pkgs in home-manager
-        pkgs.home-manager 
+    programs.firefox.enable = true;
+    programs.zsh.enable = true;
+    environment.systemPackages = with pkgs; [ 
+        git 
+        vim
+        wget
+        curl
+        wl-clipboard
+        htop
+        unzip
+        zip
+        kitty               # Default terminal for Hyprland
+        fcitx5              # Input method framework
+        fcitx5-unikey       # Vietnamese input support
+        fcitx5-gtk          # GTK integration for Fcitx5
+        nautilus            # File manager
     ];  
 }

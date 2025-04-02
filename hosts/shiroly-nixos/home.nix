@@ -1,8 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
     imports = [
-        ../../modules/home/
+        ../../modules/home
     ];
     nixpkgs.config.allowUnfree = true;
     home = {
@@ -21,7 +21,7 @@
             pavucontrol
             telegram-desktop
             spotify
-            nautilus
+
 
             # CLI
             atuin
@@ -45,16 +45,6 @@
             zathura
             fd
 
-            # Indispensable tools
-            git 
-            vim
-            wget
-            curl
-            wl-clipboard
-            htop
-            unzip
-            zip
-
             # Code stuff
             rustup
             python3
@@ -66,7 +56,6 @@
 
             # Terminal
             foot
-            kitty
             alacritty
 
             # WM & ricing
@@ -79,9 +68,6 @@
 
             # Other
             bemoji 
-            fcitx5        # Input method framework
-            fcitx5-unikey # Vietnamese input support
-            fcitx5-gtk    # GTK integration for Fcitx5
-        ]
+        ];
     };
 }
